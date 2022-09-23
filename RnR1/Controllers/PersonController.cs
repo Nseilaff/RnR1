@@ -9,11 +9,6 @@ namespace RnR1.Controllers
         {
             this.repo = repo;
         }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
         public IActionResult VeiwPerson(int id)
         {
             var person = repo.GetPerson(id);

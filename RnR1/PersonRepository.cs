@@ -14,11 +14,11 @@ namespace RnR1
         }
         public IEnumerable<Person> GetAllPerson()
         {
-            return _conn.Query<Person>("Select * from Person");
+            return _conn.Query<Person>("Select * from person");
         }
         public Person GetPerson(int id)
         {
-            return _conn.QuerySingle<Person>("SELECT * From Person where IdPerson = @id, new {id = id}");
+            return _conn.QuerySingle<Person>("SELECT * From person where IdPerson = @id, new {id = id}");
         }
 
     }
