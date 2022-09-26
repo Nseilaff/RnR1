@@ -10,6 +10,7 @@ namespace RnR1
         public void UpdatePerson(Person person);
         public void InsertPerson(Person personToInsert);
         public void DeletePerson(Person person);
+        public Person GetTimeSlots(Person person);
         
     }
 }

@@ -1,15 +1,15 @@
 ﻿@model Person
 
-<h2>Create a New Product</h2>
+<h2>Create a New Reservation</h2>
 
 @using (Html.BeginForm("InsertPersonToDatabase", "person", "Post"))
 {
     <input asp-for="PersonID" type="hidden" value="" />
 
-    <label asp-for="FName" class="control-label">FName</label>
+    <label asp-for="FName" class="control-label">First Name</label>
     <input type="text" name="FName" class="form-control" value="" />
 
-    <label asp-for="LName" class="control-label">LName</label>
+    <label asp-for="LName" class="control-label">Last Name</label>
     <input type="text" name="LName" class="form-control" />
 
     <label asp-for="PhoneNum" class="control-label">PhoneNum</label>

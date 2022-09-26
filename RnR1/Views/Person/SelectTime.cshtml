@@ -1,0 +1,20 @@
+﻿@model Person
+<h2>Times available for @Model.DateParse()</h2>
+@using (Html.BeginForm("InsertPersonToDatabase", "Person", FormMethod.Post ))
+{
+    <input asp-for="PersonID" type="hidden" value="@Model.PersonID"/>
+    <input asp-for="FName" type="hidden" value="@Model.FName" />
+    <input asp-for="LName" type="hidden" value="@Model.LName" />
+    <input asp-for="ReserveDate" type="hidden" value="@Model.ReserveDate" />
+
+    @foreach (var time in Model.TimeSlots)
+    {
+        <label asp-for="ReserveDate" class="control-label">@time</label>
+        <input type="radio" value="@time" name="Time"/>
+    }
+
+    <input type="submit" value="Select Time" class="btn btn-primary"/>
+
+}
+
+<a href="/Person/Index">Cancel</a>

@@ -49,5 +49,18 @@ namespace RnR1.Controllers
             repo.DeletePerson(person);
             return RedirectToAction("Index");
         }
+
+        public IActionResult SelectTime(Person person)
+        {
+            person = repo.GetTimeSlots(person);
+            return View(person);
+        }
+
+        //public IActionResult UpdateTime(Person person)
+        //{
+        //    person = repo.GetTimeSlots(person);
+        //    return View(person);
+
+        //}
     }
 }
