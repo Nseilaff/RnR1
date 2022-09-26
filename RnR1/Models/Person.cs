@@ -12,7 +12,8 @@ namespace RnR1.Models
         public string LName { get; set; }
         public string Email { get; set; }
         public int PhoneNum { get; set; }
-        public DateTime ReserveDate { get; set; }
+        public string ReserveDate { get; set; }
+       
     }
 }
 

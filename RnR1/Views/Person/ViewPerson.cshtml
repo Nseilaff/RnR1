@@ -1,7 +1,8 @@
-﻿@model IEnumerable<Person>
+﻿@using RnR1.Models
+@model Person
 
 <h3>Person</h3>
-<table class="Person">
+<table class="table">
     <tr>
         <th>PersonID</th>
         <th>FName</th>
@@ -11,16 +12,26 @@
         <th>ReserveDate</th>
     </tr>
 
-    @foreach (var person in @Model)
-    {
+    
         <tr>
-            <td>@person.PersonID</td>
-            <td>@person.FName</td>
-            <td>@person.LName</td>
-            <td>@person.Email</td>
-            <td>@person.PhoneNum</td>
-            <td>@person.ReserveDate</td>
+            <td>@Model.PersonID</a></td>
+            <td>@Model.FName</td>
+            <td>@Model.LName</td>
+            <td>@Model.Email</td>
+            <td>@Model.PhoneNum</td>
+            <td>@Model.ReserveDate</td>
         </tr>
-    }
+    
 
 </table>
+<div style="display: block">
+    <a href="/Person/UpdatePerson/@Model.PersonID">Update this Person</a>
+</div>
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    {
+        <input type="hidden" asp-for="PersonID" value="@Model.PersonID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this reservation" />
+    }
+</div>

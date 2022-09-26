@@ -7,5 +7,9 @@ namespace RnR1
     {
         public IEnumerable<Person> GetAllPerson();
         public Person GetPerson(int id);
+        public void UpdatePerson(Person person);
+        public void InsertPerson(Person personToInsert);
+        public void DeletePerson(Person person);
+        
     }
 }
