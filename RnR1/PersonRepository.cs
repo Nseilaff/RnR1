@@ -46,7 +46,7 @@ namespace RnR1
         public void DeletePerson(Person person)
         {
             _conn.Execute("DELETE FROM person Where PersonID = @id", new { id = person.PersonID });
-            _conn.Execute("DELETE FROM events Where PersonID = @id", new { id = person.PersonID });
+            //_conn.Execute("DELETE FROM events Where PersonID = @id", new { id = person.PersonID });
         }
 
         public Person GetTimeSlots(Person person)

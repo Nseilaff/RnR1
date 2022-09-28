@@ -5,13 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.123" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-    <PackageReference Include="MySql.Data" Version="8.0.30" />
+    <Content Include="images\OceanBungalow.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Events\" />
+    <None Include="wwwroot\css\MR78.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
   </ItemGroup>
 
 </Project>

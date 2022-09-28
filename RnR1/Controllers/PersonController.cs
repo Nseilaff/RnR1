@@ -56,11 +56,11 @@ namespace RnR1.Controllers
             return View(person);
         }
 
-        //public IActionResult UpdateTime(Person person)
-        //{
-        //    person = repo.GetTimeSlots(person);
-        //    return View(person);
+        public IActionResult UpdateTime(Person person)
+        {
+            person = repo.GetTimeSlots(person);
+            return View(person);
 
-        //}
+        }
     }
 }

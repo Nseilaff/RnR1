@@ -18,15 +18,29 @@
     <label asp-for="Email" class="control-label">Email</label>
     <input type="text" name="Email" class="form-control" />
 
-    <label asp-for="ReserveDate" class="control-label">Reserve Date</label>
-    <input type="datetime" name="ReserveDate" class="form-control" />
-
-    <input type="submit" value="Create Person" class="btn btn-primary" />
     <div class="form-group">
-        <label for="">Reservation</label>
-        <select class="form-control" name="PersonID" value="">
+        <label for="">Reservation Date</label>
+        <select class="form-control" name="ReserveDate" value="">
+            @foreach (var date in Model.Date)
+            {
+                <option value="@date">@date</option>
+            }
         </select>
     </div>
 
+    @*<label asp-for="Date" class="control-label">Reserve Date</label>
+    <input type="text" name="ReserveDate" class="form-control" />*@
+
+    
+    <div class="form-group">
+        <label for="">Reservation Time</label>
+        <select class="form-control" name="Time" value="">
+            @foreach(var time in Model.TimeSlots)
+            {
+                <option value="@time">@time</option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Create Person" class="btn btn-primary" />
 
 }

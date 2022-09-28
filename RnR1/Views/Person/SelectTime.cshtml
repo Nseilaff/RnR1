@@ -1,5 +1,5 @@
 ﻿@model Person
-<h2>Times available for @Model.DateParse()</h2>
+<h2>Times available for @Model.Date</h2>
 @using (Html.BeginForm("InsertPersonToDatabase", "Person", FormMethod.Post ))
 {
     <input asp-for="PersonID" type="hidden" value="@Model.PersonID"/>

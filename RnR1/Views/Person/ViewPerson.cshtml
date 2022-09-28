@@ -10,6 +10,8 @@
         <th>Email</th>
         <th>PhoneNum</th>
         <th>ReserveDate</th>
+        <th>Time</th>
+        <th>NumOfPeople</th>
     </tr>
 
     
@@ -20,16 +22,18 @@
             <td>@Model.Email</td>
             <td>@Model.PhoneNum</td>
             <td>@Model.ReserveDate</td>
+            <td>@Model.Time</td>
+            <td>@Model.NumOfPeople</td>
         </tr>
     
 
 </table>
-@*<div style="display: block">
+<div style="display: block">
     <a href="/Person/UpdatePerson/@Model.PersonID">Update this Person</a>
-</div>*@
+</div>
 <div style="display: block">
 
-    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    @using (Html.BeginForm("DeletePerson", "Person", "Post"))
     {
         <input type="hidden" asp-for="PersonID" value="@Model.PersonID" />
         <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this reservation" />

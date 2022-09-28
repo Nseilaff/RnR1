@@ -1,11 +1,17 @@
 ﻿@model IEnumerable<Person>
 
 <h3>Person</h3>
+@*<div class="background-image">
 
+    <link rel="stylesheet" href="/css/site.css" />
+</div>*@
 <div style="display: block">
-    <a href="/Person/InsertPerson/">Create New Reservation</a>
+    <button type="button" class="btn btn-primary">
+    <a class="text-light" href="/Person/InsertPerson/">Create New Reservation</a>
+    </button>
 </div>
-<table class="table">
+<div>
+    <table class="table table-light opacity-50">
     <tr>
         <th>PersonID</th>
         <th>FName</th>
@@ -13,6 +19,8 @@
         <th>Email</th>
         <th>PhoneNum</th>
         <th>ReserveDate</th>
+        <th>Time</th>
+        <th>NumOfPeople</th>
     </tr>
 
     @foreach (var person in @Model)
@@ -24,8 +32,11 @@
             <td>@person.Email</td>
             <td>@person.PhoneNum</td>
             <td>@person.ReserveDate</td>
-            <td>@person.DateParse()</td>
+            <td>@person.Time</td>
+            <td>@person.NumOfPeople</td>
+            @*<td>@person.DateParse()</td>*@
         </tr>
     }
 
-</table>
+    </table>
+</div>
