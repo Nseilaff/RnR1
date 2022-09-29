@@ -77,9 +77,12 @@ body {
 nav {
     color: blue;
 }
-#myphoto{
-    background-image: url(MR78.jpg);
+#myphoto {
+    background-size: cover;
+    background-image: url('sunset.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.textsize{
-    text-size-adjust: 15%;
+.navbar{
+    background-color: darkkhaki;
 }

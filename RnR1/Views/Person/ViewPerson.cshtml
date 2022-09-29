@@ -2,7 +2,7 @@
 @model Person
 
 <h3>Person</h3>
-<table class="table">
+<table class="table text-white" >
     <tr>
         <th>PersonID</th>
         <th>FName</th>
@@ -29,13 +29,17 @@
 
 </table>
 <div style="display: block">
-    <a href="/Person/UpdatePerson/@Model.PersonID">Update this Person</a>
+    <button type="button" class="btn btn-primary">
+    <a class="text-light" href="/Person/UpdatePerson/@Model.PersonID">Update this Person</a>
+    </button>
 </div>
 <div style="display: block">
 
     @using (Html.BeginForm("DeletePerson", "Person", "Post"))
     {
         <input type="hidden" asp-for="PersonID" value="@Model.PersonID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this reservation" />
+        <button type="button" class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" value="">
+            Delete this reservation
+        </button>
     }
 </div>

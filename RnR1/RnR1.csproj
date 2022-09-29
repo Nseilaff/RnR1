@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="images\OceanBungalow.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\css\MR78.jpg" />
   </ItemGroup>
 
@@ -16,6 +12,10 @@
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
 
 </Project>
