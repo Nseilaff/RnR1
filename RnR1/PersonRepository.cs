@@ -25,8 +25,8 @@ namespace RnR1
 
         public void UpdatePerson(Person person)
         {
-            _conn.Execute("UPDATE person SET PersonID = @PersonID FName = @FName, LName = @LName, Email = @Email, PhoneNum = @PhoneNum ",
-                new { PersonID = person.PersonID, FName = person.FName, LName = person.LName, Email = person.Email, PhoneNum = person.PhoneNum });
+            _conn.Execute("UPDATE person SET FName = @FName, LName = @LName, Email = @Email, PhoneNum = @PhoneNum WHERE (PersonID = @id);",
+                new { id = person.PersonID, FName = person.FName, LName = person.LName, Email = person.Email, PhoneNum = person.PhoneNum });
 
         }
         public void InsertPerson(Person personToInsert)
