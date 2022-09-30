@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Event>
+
+<h3>Event</h3>
+@*<div class="background-image">
+
+    <link rel="stylesheet" href="/css/site.css" />
+</div>*@
+@*<div style="display: block">
+    <a href="/Event/InsertEvent/">Create New Reservation</a>
+</div>*@
+<table class="table">
+    <tr>
+        <th>EventID</th>
+        <th>ReservedDate</th>
+        <th>Time</th>
+        <th>NumOfPeople</th>
+        <th>PersonID</th>        
+    </tr>
+
+    @foreach (var e in @Model)
+    {
+        <tr>
+            <td>@e.EventID</td>                    
+            <td>@e.ReservedDate</td>
+            <td>@e.Time</td>
+            <td>@e.NumOfPeople</td>
+            <td>@e.PersonID</td>
+            @*<td>@person.DateParse()</td>*@
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,27 @@
+﻿@*@model IEnumerable<Person>
+
+<h3>Person</h3>
+<table class="Person">
+    <tr>
+        <th>PersonID</th>
+        <th>FName</th>
+        <th>LName</th>
+        <th>Email</th>
+        <th>PhoneNum</th>
+        <th>ReserveDate</th>
+    </tr>
+
+    @foreach (var person in @Model)
+    {
+        <tr>
+            <td>@person.PersonID</td>
+            <td>@person.FName</td>
+            <td>@person.LName</td>
+            <td>@person.Email</td>
+            <td>@person.PhoneNum</td>
+            <td>@person.ReserveDate</td>
+        </tr>
+    }
+
+    </table>*@
+

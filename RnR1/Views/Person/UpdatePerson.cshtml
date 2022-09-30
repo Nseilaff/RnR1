@@ -19,5 +19,28 @@
     <label asp-for="PhoneNum" class="control-label">PhoneNum</label>
     <input type="number" name="PhoneNum" class="form-control" value="@Model.PhoneNum" />
 
+    <div class="form-group text-white">
+        <label for="">Reservation Date</label>
+        <select class="form-control" name="ReserveDate" value="">
+            @foreach (var date in Model.Date)
+            {
+                <option value="@date">@date</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group text-white">
+        <label for="">Reservation Time</label>
+        <select class="form-control" name="Time" value="">
+            @foreach (var time in Model.TimeSlots)
+            {
+                <option value="@time">@time</option>
+            }
+        </select>
+    </div>
+
+    <label asp-for="NumOfPeople" class="control-label">Number in Group</label>
+    <input type="number" name="NumOfPeople" class="form-control" value="@Model.NumOfPeople" />
+
     <input type="submit" value="Update Info" class="btn btn-primary" />
 }
